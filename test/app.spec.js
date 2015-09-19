@@ -1,6 +1,12 @@
 'use strict';
 
-var Bot = require('../lib/bot.js');
+var Config = {
+  consumer_key: '123',
+  consumer_secret: '123',
+  access_token: '123',
+  access_token_secret: '123'
+};
+var Bot = require('../lib/bot.js')(Config);
 var assert = require('assert');
 
 suite('Bot', function() {
