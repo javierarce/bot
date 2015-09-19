@@ -1,5 +1,4 @@
-## Template for my Twitter bots
-
+## Twiter bot template
 
 ## Packages included
 
