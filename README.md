@@ -1,3 +1,5 @@
+![](https://travis-ci.org/javierarce/bot.svg?branch=master)
+
 ## Twiter bot template
 
 ## Packages included
