@@ -1,4 +1,5 @@
 var _ = require('underscore');
+var Bot = require('./lib/bot');
 var Config = require('./lib/config').Config;
 var Twit = require('twit');
 var T = new Twit(Config);
@@ -9,7 +10,7 @@ var https = require('https');
 var request = require('request');
 
 function init() {
-  console.log('Hi!')
+  Bot.sayHi();
 }
 
 init();

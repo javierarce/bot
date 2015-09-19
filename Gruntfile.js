@@ -1,18 +1,34 @@
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+  // Show elapsed time at the end
+  require('time-grunt')(grunt);
+  // Load all grunt tasks
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
+    mochaTest: {
+      options: {
+        ui: 'tdd'
+      },
+      test: {
+        src: ['test/**/*.js']
+      }
+    },
     jshint: {
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish')
       },
       gruntfile: {
         src: 'Gruntfile.js'
       },
-      app: {
-        src: ['js/*.js', '*.js']
+      lib: {
+        src: ['lib/**/*.js']
+      },
+      test: {
+        src: ['test/**/*.js']
       }
     },
     watch: {
@@ -20,25 +36,18 @@ module.exports = function(grunt) {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      app: {
-        files: '<%= jshint.app.src %>',
-        tasks: ['jshint:app']
-      }
-    },
-    notify_hooks: {
-      options: {
-        enabled: true,
-        max_jshint_notifications: 5
+      lib: {
+        files: '<%= jshint.lib.src %>',
+        tasks: ['jshint:lib', 'mochaTest']
+      },
+      test: {
+        files: '<%= jshint.test.src %>',
+        tasks: ['jshint:test', 'mochaTest']
       }
     }
   });
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-notify');
-
   // Default task.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'mochaTest']);
 
 };
