@@ -1,0 +1,45 @@
+{
+  "name": "bot",
+  "description": "Twitter Bot template",
+  "version": "0.1.0",
+  "homepage": "https://github.com/javierarce/bot",
+  "author": {
+    "name": "Javier Arce",
+    "email": "javierarce@gmail.com",
+    "url": "http://javierarce.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/javierarce/bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/javierarce/bot/issues"
+  },
+  "licenses": [
+    {
+    "type": "MIT",
+    "url": "https://github.com/javierarce/bot/blob/master/LICENSE-MIT"
+  }
+  ],
+  "engines": {
+    "node": "0.10.33",
+    "npm": "2.1.10"
+  },
+  "dependencies": {
+    "cli-color": "1.0.0",
+    "inflection": "~1.2.6",
+    "pos": "0.1.7-1",
+    "redis": "^0.12.1",
+    "wordfilter": "0.2.1",
+    "request": "latest",
+    "twit": "~1.1.9",
+    "underscore": "latest",
+    "utf8": "latest"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-notify": "~0.2.18"
+  },
+  "keywords": ["bot", "template"]
+}
