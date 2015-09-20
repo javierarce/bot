@@ -1,11 +1,6 @@
 'use strict';
 
-var Config = {
-  consumer_key: '123',
-  consumer_secret: '123',
-  access_token: '123',
-  access_token_secret: '123'
-};
+var Config = require('../lib/config')('test');
 var Bot = require('../lib/bot.js')(Config);
 var assert = require('assert');
 
