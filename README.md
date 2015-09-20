@@ -37,6 +37,10 @@ You'll need to have `node`, `npm` and `redis` installed.
 * [underscore](https://www.npmjs.com/package/underscore): JavaScript's functional programming helper library.
 * [cli-color](https://github.com/medikoo/cli-color): colors and formatting for the console.
 
+## Other cool packages
+
+Have a look to this list of [cool node.js packages](https://github.com/javierarce/toolbox#nodejs) I've compiled. They are great to use in creative coding projects.
+
 ## License
 Copyright (c) 2015 Javier Arce
 Licensed under the MIT license.
